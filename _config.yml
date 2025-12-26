@@ -1,5 +1,5 @@
-title: cvless
-description: Jekyll theme for a beautiful online CV
+title: Hi, I'm Sneha Jaikumar!
+description: I am a Data Scientist
 baseurl: ""
 url: https://snehajaikumar23.github.io
 
@@ -9,29 +9,18 @@ tagshort: Jekyll theme
 
 # author settings
 author:
-  name: Place Holder
-  email: username@domain.com
+  name: Sneha Jaikumar
+  email: sj3474@columbia.edu
 photo: assets/files/photo.jpg
 joblines:
-  - University of Jekyll
-  - Department of Themes
-  - 123 Main St, Anytown, USA
-address: Foobar Hall 1.23
-phone: +1 234 567 890
+  - Columbia University
+  - Master's Student, Data Science
 
 # profile links
 profile:
-  facebook: https://www.facebook.com/username
-  x: https://x.com/username
-  mastodon: https://mastodon.social/@username
-  bluesky: https://bsky.app/profile/username.bsky.social
-  instagram: https://www.instagram.com/username
-  linkedin: https://www.linkedin.com/in/username
-  xing: https://www.xing.com/profile/username
-  stackoverflow: https://stackoverflow.com/users/0000000/username
-  medium: https://medium.com/@username
-  github: https://github.com/username
-  cv: true
+  linkedin: https://www.linkedin.com/in/snehajaikumar
+  github: https://github.com/snehajaikumar23
+  cv: false
 
 # build settings
 permalink: pretty
