@@ -1,9 +1,7 @@
 title: cvless
 description: Jekyll theme for a beautiful online CV
 baseurl: ""
-url: https://piazzai.github.io/cvless
-
-theme: cvless
+url: https://snehajaikumar23.github.io
 
 # site settings
 taglong: Jekyll theme for a beautiful online CV
@@ -46,7 +44,6 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-gist
-  - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
 
