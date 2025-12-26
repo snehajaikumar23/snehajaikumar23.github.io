@@ -17,6 +17,9 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 
 {% include archive.html %}
 
+---
+
+<section id="work" class="wide-section">
 ## Work
 {: #work }
 
@@ -32,7 +35,10 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 - Built features for Vision Pro applications
 - Worked at the intersection of ML and user experience
 
+</section>
+
 ---
+<section id="projects" class="wide-section">
 
 ## Projects
 {: #projects }
@@ -48,3 +54,5 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 
 - Built during the AWS Bedrock Innovation Challenge
 - Leveraged S3 and the Nova Pro model to create an agentic recommendation platform
+
+</section>
