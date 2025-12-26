@@ -101,9 +101,18 @@ a.reversefootnote {
   }
 }
 
+#home .site-nav {
+  display: flex;
+  gap: 2rem;     
+  margin-left: 2rem;
+}
+
 #home .site-nav a {
   font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
   opacity: 0.85;
+  transition: opacity 0.2s ease;
 }
 
 #home .site-nav a:hover {
@@ -127,6 +136,12 @@ a.reversefootnote {
 }
 
 #home .site-nav a.active {
-  font-weight: 500;
+  color: var(--color-heading);
+  opacity: 1;
   border-bottom: 1px solid currentColor;
+}
+
+#home .toggle-icon {
+  margin-left: auto;
+  padding-left: 2rem;
 }

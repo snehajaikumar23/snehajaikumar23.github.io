@@ -10,7 +10,7 @@ document.addEventListener(
     const header = document.querySelector("#home header");
 
     if (header) {
-      const revealPoint = window.innerHeight * 0.5;
+      const revealPoint = window.innerHeight;
 
       const toggleHeader = () => {
         if (window.scrollY > revealPoint) {
