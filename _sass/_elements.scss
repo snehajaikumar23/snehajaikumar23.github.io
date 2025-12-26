@@ -100,3 +100,17 @@ a.reversefootnote {
     border: none;
   }
 }
+
+#home .site-nav a {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+#home .site-nav a:hover {
+  opacity: 1;
+}
+
+#home .site-title,
+#home header small {
+  display: none;
+}
