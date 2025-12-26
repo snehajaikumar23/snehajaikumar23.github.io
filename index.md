@@ -16,3 +16,35 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 Below is a list of blog posts included for illustrative purposes. Make sure to delete or modify them before deploying your website.
 
 {% include archive.html %}
+
+## Work
+{: #work }
+
+### Software Engineer — McMaster-Carr
+*2024 – 2025*
+
+- Worked on infrastructure and systems projects
+- Focused on reliability, scalability, and automation
+
+### Intern — Apple
+*Summer 2022, Summer 2023*
+
+- Built features for Vision Pro applications
+- Worked at the intersection of ML and user experience
+
+---
+
+## Projects
+{: #projects }
+
+### Mindflow
+*A personal AI system for turning notes into actions.*
+
+- Built during the AWS Small Language Model (SLM) Build Day
+- Trained a TinyLlama SLM with Tranium 1.0
+
+### Health and Wellness Shopping Recommender
+*Personal wellness recommendation system integrated with AWS.*
+
+- Built during the AWS Bedrock Innovation Challenge
+- Leveraged S3 and the Nova Pro model to create an agentic recommendation platform

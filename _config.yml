@@ -1,10 +1,10 @@
 title: Hi, I'm Sneha Jaikumar!
-description: I am a Data Scientist
+description: Insert description here.
 baseurl: ""
 url: https://snehajaikumar23.github.io
 
 # site settings
-taglong: Jekyll theme for a beautiful online CV
+taglong: I am a Data Scientist
 tagshort: Jekyll theme
 
 # author settings
@@ -18,7 +18,7 @@ joblines:
 
 # profile links
 profile:
-  linkedin: https://www.linkedin.com/in/snehajaikumar
+  linkedin: https://www.linkedin.com/in/sneha-jaikumar
   github: https://github.com/snehajaikumar23
   cv: false
 
