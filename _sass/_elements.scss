@@ -114,3 +114,19 @@ a.reversefootnote {
 #home header small {
   display: none;
 }
+
+#home header {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#home header.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#home .site-nav a.active {
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+}
