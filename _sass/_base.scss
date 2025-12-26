@@ -20,8 +20,8 @@ a {
 
   &:focus,
   &:hover {
-    border-bottom: calc(var(--type-size) / 10) dotted var(--color-link);
-    color: var(--color-link);
+    border-bottom: calc(var(--type-size) / 10) dotted currentColor;
+    opacity: 0.9;
   }
 }
 
