@@ -19,7 +19,7 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 
 ---
 
-<section id="work" class="wide-section">
+<section id="work" class="wide-section" markdown="1">
 ## Work
 {: #work }
 
@@ -38,7 +38,7 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 </section>
 
 ---
-<section id="projects" class="wide-section">
+<section id="projects" class="wide-section" markdown="1">
 
 ## Projects
 {: #projects }
