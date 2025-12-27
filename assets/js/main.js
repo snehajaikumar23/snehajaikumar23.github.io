@@ -90,4 +90,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((section) => navObserver.observe(section));
   }
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  if (filterButtons.length && projectCards.length) {
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        filterButtons.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+
+        projectCards.forEach((card) => {
+          const category = card.dataset.category;
+          card.style.display =
+            filter === "all" || category === filter ? "flex" : "none";
+        });
+      });
+    });
+  }
 });

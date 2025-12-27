@@ -302,5 +302,83 @@ a.reversefootnote {
   }
 }
 
+.project-filters {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  opacity: 0.6;
+}
+
+.filter-btn.is-active {
+  opacity: 1;
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 1.25rem 1.25rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-tags span {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  opacity: 0.8;
+}
+
+.project-card a {
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.project-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+
 
 

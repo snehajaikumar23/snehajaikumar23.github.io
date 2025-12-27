@@ -73,21 +73,72 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 </section>
 
 
-<section id="projects" class="wide-section" markdown="1">
+<section id="projects" class="wide-section">
+  <h2>Projects</h2>
 
-## Projects
-{: #projects }
+  <!-- Category tabs -->
+  <div class="project-filters" role="tablist">
+    <button class="filter-btn is-active" data-filter="all" role="tab">All</button>
+    <button class="filter-btn" data-filter="papers" role="tab">Papers</button>
+    <button class="filter-btn" data-filter="web" role="tab">Web</button>
+    <button class="filter-btn" data-filter="ml" role="tab">Machine Learning</button>
+  </div>
 
-### Mindflow
-*A personal AI system for turning notes into actions.*
+  <!-- Project grid -->
+  <div class="project-grid">
 
-- Built during the AWS Small Language Model (SLM) Build Day
-- Trained a TinyLlama SLM with Tranium 1.0
+    <!-- Paper -->
+    <article class="project-card" data-category="papers">
+      <h3>Microglia Gene Expression Analysis</h3>
+      <p class="project-desc">
+        Machine learning analysis of microglial gene expression to study early life stress.
+      </p>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>scikit-learn</span>
+        <span>Bioinformatics</span>
+      </div>
+      <a
+    href="https://arxiv.org/abs/XXXX.XXXXX"
+    target="_blank"
+    rel="noopener"
+    class="paper-link">
+    Read paper →
+    </a>
+    </article>
 
-### Health and Wellness Shopping Recommender
-*Personal wellness recommendation system integrated with AWS.*
+    <!-- Web -->
+    <article class="project-card" data-category="web">
+      <h3>Mindflow</h3>
+      <p class="project-desc">
+        A personal AI system that turns notes into structured actions.
+      </p>
+      <div class="project-tags">
+        <span>React</span>
+        <span>AWS</span>
+        <span>LLMs</span>
+      </div>
+      <a href="https://github.com/yourusername/mindflow" target="_blank" rel="noopener">
+        View on GitHub →
+      </a>
+    </article>
 
-- Built during the AWS Bedrock Innovation Challenge
-- Leveraged S3 and the Nova Pro model to create an agentic recommendation platform
+    <!-- ML -->
+    <article class="project-card" data-category="ml">
+      <h3>Health & Wellness Recommender</h3>
+      <p class="project-desc">
+        Agentic recommendation system for personalized wellness shopping.
+      </p>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>AWS Bedrock</span>
+        <span>ML</span>
+      </div>
+      <a href="https://github.com/yourusername/wellness-recommender" target="_blank" rel="noopener">
+        View on GitHub →
+      </a>
+    </article>
 
+  </div>
 </section>
+
