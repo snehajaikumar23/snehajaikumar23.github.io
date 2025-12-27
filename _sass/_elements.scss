@@ -160,13 +160,12 @@ a.reversefootnote {
 
 .timeline {
   position: relative;
-  margin-top: 2rem;
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
 
   &::before {
     content: "";
     position: absolute;
-    left: 0.75rem;
+    left: 0.5rem;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -175,37 +174,51 @@ a.reversefootnote {
 }
 
 .timeline-item {
+  display: block;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.5rem 0 0.5rem 1.25rem;
   position: relative;
-  transition-delay: 0.05s;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  opacity: 0;
+  cursor: pointer;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
   transform: translateY(12px);
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    opacity 0.6s ease 0.05s,
+    transform 0.6s ease 0.05s;
 
   &::before {
     content: "";
     position: absolute;
-    left: -0.15rem;
-    top: 0.4em;
-    width: 0.75rem;
-    height: 0.75rem;
+    left: -0.1rem;
+    top: 0.45em;
+    width: 0.6rem;
+    height: 0.6rem;
     background-color: var(--color-background);
-    border: 2px solid var(--color-heading);
+    border: 2px solid var(--color-border);
     border-radius: 50%;
   }
 }
 
-// .timeline-title {
-//   font-weight: 600;
-//   margin-bottom: 0.25rem;
-// }
-
 .timeline-item.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.timeline-item:focus-visible {
+  outline: 2px solid var(--color-border);
+  outline-offset: 2px;
+}
+
+.timeline-item.is-active {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.timeline-item.is-active::before {
+  border-color: var(--color-heading);
 }
 
 .timeline-role {
@@ -214,9 +227,48 @@ a.reversefootnote {
 }
 
 .timeline-date {
+  display: block;
   font-size: 0.85rem;
+}
+
+.timeline-company {
+  display: block;
+}
+
+.work-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.work-details {
+  position: relative;
+}
+
+.work-detail {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-detail.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+}
+
+.work-meta {
+  font-size: 0.9rem;
   opacity: 0.7;
   margin-bottom: 0.5rem;
+}
+
+.work-skills {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -226,4 +278,29 @@ a.reversefootnote {
     transition: none;
   }
 }
+
+@media (max-width: 768px) {
+  .work-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    padding-left: 0;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+}
+
+
 

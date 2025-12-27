@@ -21,34 +21,54 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 <section id="work" class="wide-section">
   <h2>Work</h2>
 
-  <div class="timeline">
+  <div class="work-layout">
 
-    <div class="timeline-item">
-      <div class="timeline-role">
-        Software Engineer — McMaster-Carr
-      </div>
-      <div class="timeline-date">
-        2024 – 2025
-      </div>
-      <ul>
-        <li>Worked on infrastructure and systems projects</li>
-        <li>Focused on reliability, scalability, and automation</li>
-      </ul>
+    <!-- Timeline (left) -->
+    <div class="timeline">
+      <button type="button" class="timeline-item is-active" data-role="mcmaster" aria-controls="mcmaster"
+  aria-selected="true">
+        <span class="timeline-date">2024–2025</span>
+        <span class="timeline-company">McMaster-Carr</span>
+      </button>
+
+      <button type="button" class="timeline-item" data-role="apple">
+        <span class="timeline-date">2022–2023</span>
+        <span class="timeline-company">Apple</span>
+      </button>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-role">
-        Intern — Apple
-      </div>
-      <div class="timeline-date">
-        Summer 2022, Summer 2023
-      </div>
-      <ul>
-        <li>Built features for Vision Pro applications</li>
-        <li>Worked at the intersection of ML and user experience</li>
-      </ul>
-    </div>
+    <!-- Details (right) -->
+    <div class="work-details">
 
+      <div class="work-detail is-visible" id="mcmaster">
+        <h3>Software Engineer — McMaster-Carr</h3>
+        <p class="work-meta">2024–2025 · Chicago, IL</p>
+
+        <p class="work-skills">
+          Infrastructure · Reliability · Automation
+        </p>
+
+        <ul>
+          <li>Worked on infrastructure and systems projects</li>
+          <li>Improved reliability and operational scalability</li>
+        </ul>
+      </div>
+
+      <div class="work-detail" id="apple">
+        <h3>Intern — Apple</h3>
+        <p class="work-meta">Summer 2022, 2023 · Cupertino, CA</p>
+
+        <p class="work-skills">
+          Vision Pro · Machine Learning · UX
+        </p>
+
+        <ul>
+          <li>Built features for Vision Pro applications</li>
+          <li>Worked at the intersection of ML and user experience</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </section>
 

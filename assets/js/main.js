@@ -1,29 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Particles background
+  //Particles background
   particlesJS.load("particles-js", "assets/js/particles.json");
 
-  //Fade-in timeline items on scroll
+  //Work timeline interaction
   const timelineItems = document.querySelectorAll(".timeline-item");
+  const workDetails = document.querySelectorAll(".work-detail");
 
-  if (timelineItems.length) {
-    const timelineObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target); // animate once
-          }
+  if (timelineItems.length && workDetails.length) {
+    timelineItems.forEach((item) => {
+      // Initialize aria state
+      item.setAttribute(
+        "aria-selected",
+        item.classList.contains("is-active") ? "true" : "false"
+      );
+
+      // Click interaction
+      item.addEventListener("click", () => {
+        const targetId = item.dataset.role;
+
+        timelineItems.forEach((i) => {
+          i.classList.remove("is-active");
+          i.setAttribute("aria-selected", "false");
         });
-      },
-      {
-        threshold: 0.15,
-      }
-    );
 
-    timelineItems.forEach((item) => timelineObserver.observe(item));
+        item.classList.add("is-active");
+        item.setAttribute("aria-selected", "true");
+
+        workDetails.forEach((detail) => {
+          detail.classList.toggle(
+            "is-visible",
+            detail.id === targetId
+          );
+        });
+      });
+
+      // Keyboard accessibility
+      item.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
   }
 
-  // Hide nav until scroll
+  //Hide nav until scroll
   const header = document.querySelector("#home header");
 
   if (header) {
@@ -41,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleHeader();
   }
 
-  // Highlight active section in nav
+  //Highlight active section in nav
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".site-nav a");
 
@@ -70,4 +91,3 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => navObserver.observe(section));
   }
 });
-
