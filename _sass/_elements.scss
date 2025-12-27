@@ -1,3 +1,11 @@
+section {
+  margin-top: 6rem;
+}
+
+section:first-of-type {
+  margin-top: 0;
+}
+
 a.site-title {
   font-weight: 500;
   color: var(--color-heading);
@@ -326,8 +334,9 @@ a.reversefootnote {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
   gap: 2rem;
+  justify-content: start;
 }
 
 .project-card {
@@ -368,6 +377,10 @@ a.reversefootnote {
 .project-card a {
   margin-top: auto;
   font-size: 0.9rem;
+  color: var(--color-heading);
+  border-bottom: none;
+  display: inline-block;
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .project-card {
@@ -377,6 +390,18 @@ a.reversefootnote {
 .project-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-card a:hover {
+  opacity: 0.85;
+  transform: translateX(2px);
+}
+
+.project-card a:focus {
+  opacity: 1;
+  outline-offset: 2px;
+  outline: none;
+  border-bottom: 1px solid currentColor;
 }
 
 

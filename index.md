@@ -5,15 +5,9 @@ title: Home
 
 # About
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 This is the home page. It can be used for a short introduction. [Click here](cv) to see the full CV, and [here](assets/files/cv.pdf) to download a print version. The theme also ships with a blog: [click here](posts) to scroll posts from the most recent. Finally, [click here](404) to see a page that can't be found.
 
 By default, the theme only contains these few pages in order to stay lean and flexible. However, it can be easily extended to accommodate more pages, [collections](https://jekyllrb.com/docs/collections/), [categories, and tags](https://jekyllrb.com/docs/posts/#tags-and-categories).
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Below is a list of blog posts included for illustrative purposes. Make sure to delete or modify them before deploying your website.
 
 {% include archive.html %}
 
@@ -31,8 +25,13 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
         <span class="timeline-company">McMaster-Carr</span>
       </button>
 
-      <button type="button" class="timeline-item" data-role="apple">
+      <button type="button" class="timeline-item" data-role="apple-2023">
         <span class="timeline-date">2022–2023</span>
+        <span class="timeline-company">Apple</span>
+      </button>
+
+      <button class="timeline-item" data-role="apple-2022">
+        <span class="timeline-date">Summer 2022</span>
         <span class="timeline-company">Apple</span>
       </button>
     </div>
@@ -54,9 +53,9 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
         </ul>
       </div>
 
-      <div class="work-detail" id="apple">
+      <div class="work-detail" id="apple-2023">
         <h3>Intern — Apple</h3>
-        <p class="work-meta">Summer 2022, 2023 · Cupertino, CA</p>
+        <p class="work-meta">Summer 2023 · Sunnyvale, CA</p>
 
         <p class="work-skills">
           Vision Pro · Machine Learning · UX
@@ -65,6 +64,20 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
         <ul>
           <li>Built features for Vision Pro applications</li>
           <li>Worked at the intersection of ML and user experience</li>
+        </ul>
+      </div>
+
+      <div class="work-detail" id="apple-2022">
+        <h3>Software Engineering Intern — Apple</h3>
+        <p class="work-meta">Summer 2022 · Sunnyvale, CA</p>
+
+        <p class="work-skills">
+            iOS · Swift · Vision Pro · UI Engineering
+        </p>
+
+        <ul>
+            <li>Worked on early-stage features for Apple platforms</li>
+            <li>Collaborated with designers and engineers on production code</li>
         </ul>
       </div>
 
