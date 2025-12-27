@@ -17,27 +17,42 @@ Below is a list of blog posts included for illustrative purposes. Make sure to d
 
 {% include archive.html %}
 
----
 
-<section id="work" class="wide-section" markdown="1">
-## Work
-{: #work }
+<section id="work" class="wide-section">
+  <h2>Work</h2>
 
-### Software Engineer — McMaster-Carr
-*2024 – 2025*
+  <div class="timeline">
 
-- Worked on infrastructure and systems projects
-- Focused on reliability, scalability, and automation
+    <div class="timeline-item">
+      <div class="timeline-role">
+        Software Engineer — McMaster-Carr
+      </div>
+      <div class="timeline-date">
+        2024 – 2025
+      </div>
+      <ul>
+        <li>Worked on infrastructure and systems projects</li>
+        <li>Focused on reliability, scalability, and automation</li>
+      </ul>
+    </div>
 
-### Intern — Apple
-*Summer 2022, Summer 2023*
+    <div class="timeline-item">
+      <div class="timeline-role">
+        Intern — Apple
+      </div>
+      <div class="timeline-date">
+        Summer 2022, Summer 2023
+      </div>
+      <ul>
+        <li>Built features for Vision Pro applications</li>
+        <li>Worked at the intersection of ML and user experience</li>
+      </ul>
+    </div>
 
-- Built features for Vision Pro applications
-- Worked at the intersection of ML and user experience
-
+  </div>
 </section>
 
----
+
 <section id="projects" class="wide-section" markdown="1">
 
 ## Projects

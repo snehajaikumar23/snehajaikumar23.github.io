@@ -1,57 +1,73 @@
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    /* Particles background */
-    particlesJS.load("particles-js", "assets/js/particles.json", function () {
-      console.log("particles.js loaded");
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  // Particles background
+  particlesJS.load("particles-js", "assets/js/particles.json");
 
-    /* Hide nav until scroll */
-    const header = document.querySelector("#home header");
+  //Fade-in timeline items on scroll
+  const timelineItems = document.querySelectorAll(".timeline-item");
 
-    if (header) {
-      const revealPoint = window.innerHeight;
+  if (timelineItems.length) {
+    const timelineObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
 
-      const toggleHeader = () => {
-        if (window.scrollY > revealPoint) {
-          header.classList.add("is-visible");
-        } else {
-          header.classList.remove("is-visible");
-        }
-      };
+    timelineItems.forEach((item) => timelineObserver.observe(item));
+  }
 
-      window.addEventListener("scroll", toggleHeader);
-      toggleHeader();
-    }
+  // Hide nav until scroll
+  const header = document.querySelector("#home header");
 
-    /* Highlight active section */
-    const sections = document.querySelectorAll("[id]");
-    const navLinks = document.querySelectorAll(".site-nav a");
+  if (header) {
+    const revealPoint = window.innerHeight;
 
-    if (sections.length && navLinks.length) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+    const toggleHeader = () => {
+      if (window.scrollY > revealPoint) {
+        header.classList.add("is-visible");
+      } else {
+        header.classList.remove("is-visible");
+      }
+    };
 
-            const id = entry.target.getAttribute("id");
+    window.addEventListener("scroll", toggleHeader);
+    toggleHeader();
+  }
 
-            navLinks.forEach((link) => {
-              link.classList.toggle(
-                "active",
-                link.getAttribute("href") === `#${id}`
-              );
-            });
+  // Highlight active section in nav
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".site-nav a");
+
+  if (sections.length && navLinks.length) {
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const id = entry.target.getAttribute("id");
+
+          navLinks.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${id}`
+            );
           });
-        },
-        {
-          rootMargin: "-40% 0px -50% 0px",
-          threshold: 0,
-        }
-      );
+        });
+      },
+      {
+        rootMargin: "-40% 0px -50% 0px",
+        threshold: 0,
+      }
+    );
 
-      sections.forEach((section) => observer.observe(section));
-    }
-  },
-  false
-);
+    sections.forEach((section) => navObserver.observe(section));
+  }
+});
+
