@@ -44,24 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //Hide nav until scroll
-  const header = document.querySelector("#home header");
-
-  if (header) {
-    const revealPoint = window.innerHeight;
-
-    const toggleHeader = () => {
-      if (window.scrollY > revealPoint) {
-        header.classList.add("is-visible");
-      } else {
-        header.classList.remove("is-visible");
-      }
-    };
-
-    window.addEventListener("scroll", toggleHeader);
-    toggleHeader();
-  }
-
   //Highlight active section in nav
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".site-nav a");

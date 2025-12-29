@@ -11,12 +11,13 @@ title: Home
 
     <!-- Timeline (left) --> 
     <div class="timeline">
-      <button class="timeline-item" data-role="zuckerman">
+      <button type="button" class="timeline-item is-active" data-role="zuckerman" aria-controls="zuckerman"
+  aria-selected="true">
         <span class="timeline-date">Sep 2024 – Present</span>
         <span class="timeline-company">Zuckerman Institute</span>
       </button>
 
-      <button type="button" class="timeline-item is-active" data-role="zuckerman" aria-controls="zuckerman"
+      <button type="button" class="timeline-item" data-role="mcmaster"
   aria-selected="true">
         <span class="timeline-date"> Aug. 2024 – Aug. 2025</span>
         <span class="timeline-company">McMaster-Carr</span>
@@ -40,7 +41,7 @@ title: Home
             <h3>Graduate Research Assistant — Zuckerman Institute</h3>
 
             <p class="work-meta">
-                Sep 2024 – Present · New York, NY
+                Sep 2025 – Present · New York, NY
             </p>
 
             <p class="work-skills">
@@ -76,7 +77,7 @@ title: Home
       </div>
 
       <div class="work-detail" id="apple-2023">
-        <h3>Intern — Apple</h3>
+        <h3>Software Engineering Intern — Apple</h3>
         <p class="work-meta">May 2023 - Aug. 2023 · Sunnyvale, CA</p>
 
         <p class="work-skills">
