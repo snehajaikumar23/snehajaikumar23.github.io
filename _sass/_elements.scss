@@ -188,11 +188,10 @@ a.reversefootnote {
   padding-right: 2rem;
 }
 
-.section-inner {
+.section-content {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 6rem; /* ← THIS is the right shift */
 }
 
 .timeline {
@@ -340,8 +339,9 @@ a.reversefootnote {
 }
 
 @media (max-width: 768px) {
-  .section-inner {
+  .section-content {
     padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
