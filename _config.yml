@@ -1,10 +1,10 @@
 title: Hi, I'm Sneha Jaikumar!
-description: Insert description here.
+description: ""
 baseurl: ""
 url: https://snehajaikumar23.github.io
 
 # site settings
-taglong: I am a Data Scientist
+taglong: I’m a researcher and data scientist focused on building intelligent systems that can learn from complex data and respond meaningfully in the real world. I’m particularly strong at bridging machine learning research with practical software, designing pipelines that move beyond theory and scale to real use.
 tagshort: Jekyll theme
 
 # author settings
