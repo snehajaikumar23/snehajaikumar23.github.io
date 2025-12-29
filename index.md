@@ -13,7 +13,7 @@ title: Home
     <div class="timeline">
       <button type="button" class="timeline-item is-active" data-role="zuckerman" aria-controls="zuckerman"
   aria-selected="true">
-        <span class="timeline-date">Sep 2024 – Present</span>
+        <span class="timeline-date">Sep 2025 – Present</span>
         <span class="timeline-company">Zuckerman Institute</span>
       </button>
 
