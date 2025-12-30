@@ -4,6 +4,7 @@ title: Home
 ---
 
 <section id="work" class="wide-section">
+  <div class="section-inner">
   <h2>Work</h2>
 
   <div class="work-layout">
@@ -107,10 +108,12 @@ title: Home
 
     </div>
   </div>
+  </div>
 </section>
 
 
 <section id="projects" class="wide-section">
+  <div class="section-inner">
   <h2>Projects</h2>
 
   <!-- Category tabs -->
@@ -276,6 +279,7 @@ title: Home
       </div>
     </article>
 
+  </div>
   </div>
 </section>
 

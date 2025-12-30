@@ -187,23 +187,23 @@ a.reversefootnote {
   left: 50%;
   right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw;
 
-  padding-left: clamp(1.5rem, 6vw, 5rem);
-  padding-right: clamp(1.5rem, 6vw, 5rem);
+  padding-left: var(--section-padding);
+  padding-right: var(--section-padding);
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
 
-#projects.wide-section {
-  padding-left: clamp(2.5rem, 12vw, 12rem);
+:root {
+  --section-max-width: 1200px;
+  --section-padding: clamp(1.5rem, 6vw, 5rem);
 }
 
-// .section-content {
-//   max-width: 1200px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+.section-inner {
+  max-width: var(--section-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .timeline {
   position: relative;
@@ -287,9 +287,6 @@ a.reversefootnote {
   grid-template-columns: 240px 1fr;
   gap: 4rem;
   margin-top: 2rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .work-details {
