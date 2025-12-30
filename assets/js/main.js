@@ -38,40 +38,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Nav active section logic */
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".site-nav a");
+    // Highlight active section in nav (scroll position based)
+    const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
+    const sections = Array.from(document.querySelectorAll("section[id]"));
 
-  if (sections.length && navLinks.length) {
-    const navObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+    function setActiveNav() {
+      const header = document.querySelector("header");
+      const headerH = header ? header.offsetHeight : 0;
 
-          const heroHeight =
-            document.getElementById("particles-js")?.offsetHeight || 0;
+      // If you have a hero, treat "top" as no section active
+      const hero = document.getElementById("particles-js");
+      const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
 
-          // Prevent activation while hero is visible
-          if (window.scrollY < heroHeight - 80) return;
-
-          const id = entry.target.getAttribute("id");
-
-          navLinks.forEach((link) => {
-            link.classList.toggle(
-              "active",
-              link.getAttribute("href") === `#${id}`
-            );
-          });
-        });
-      },
-      {
-        rootMargin: "-40% 0px -50% 0px",
-        threshold: 0,
+      // If we're still in the hero area, clear all active
+      if (window.scrollY + headerH < heroBottom - 40) {
+        navLinks.forEach((a) => a.classList.remove("active"));
+        return;
       }
-    );
 
-    sections.forEach((section) => navObserver.observe(section));
-  }
+      const y = window.scrollY + headerH + 12; // 12px cushion below header
+
+      // Find the last section whose top is above y
+      let currentId = sections[0]?.id;
+      for (const s of sections) {
+        if (s.offsetTop <= y) currentId = s.id;
+      }
+
+      navLinks.forEach((a) => {
+        a.classList.toggle("active", a.getAttribute("href") === `#${currentId}`);
+      });
+    }
+
+    window.addEventListener("scroll", setActiveNav, { passive: true });
+    window.addEventListener("resize", setActiveNav);
+    setActiveNav();
 
   /* Project filtering */
   const filterButtons = document.querySelectorAll(".filter-btn");

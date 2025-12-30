@@ -33,6 +33,10 @@ section:first-of-type {
   margin-top: 0;
 }
 
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 a.site-title {
   font-weight: 500;
   color: var(--color-heading);
@@ -334,7 +338,7 @@ a.reversefootnote {
 }
 
 #work {
-  margin-top: 3rem;  
+  margin-top: 0rem;  
 }
 
 @media (prefers-reduced-motion: reduce) {
