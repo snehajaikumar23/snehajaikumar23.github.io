@@ -1,14 +1,15 @@
 header {
   position: fixed;
   top: 1.5rem;
-  z-index: 1000;
-
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1000;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  width: min(1100px, calc(100vw - 3rem));
 
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
