@@ -198,7 +198,7 @@ title: Home
         <h3>Trackio: Making Personal Finance Accessible to All</h3>
 
         <span class="project-award">
-            🏆 Best DE&I Submission — Hack to the Future 4
+            🏆 Best DE&I Submission - Hack to the Future 4
         </span>
 
         <p class="project-desc">
