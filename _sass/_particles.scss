@@ -89,7 +89,7 @@
 
 .particles-scroll {
   position: absolute;
-  bottom: 1%;
+  bottom: 0.5%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -108,7 +108,7 @@
 
 .theme-toggle-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
