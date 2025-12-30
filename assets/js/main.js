@@ -43,31 +43,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = Array.from(document.querySelectorAll("section[id]"));
 
     function setActiveNav() {
-      const header = document.querySelector("header");
-      const headerH = header ? header.offsetHeight : 0;
+    const header = document.querySelector("header");
+    const headerH = header ? header.offsetHeight : 0;
 
-      // If you have a hero, treat "top" as no section active
-      const hero = document.getElementById("particles-js");
-      const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
+    const hero = document.getElementById("particles-js");
+    const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
 
-      // If we're still in the hero area, clear all active
-      if (window.scrollY + headerH < heroBottom - 40) {
-        navLinks.forEach((a) => a.classList.remove("active"));
-        return;
-      }
-
-      const y = window.scrollY + headerH + 12; // 12px cushion below header
-
-      // Find the last section whose top is above y
-      let currentId = sections[0]?.id;
-      for (const s of sections) {
-        if (s.offsetTop <= y) currentId = s.id;
-      }
-
-      navLinks.forEach((a) => {
-        a.classList.toggle("active", a.getAttribute("href") === `#${currentId}`);
-      });
+    // Clear active while in hero
+    if (window.scrollY + headerH < heroBottom - 40) {
+      navLinks.forEach((a) => a.classList.remove("active"));
+      return;
     }
+
+    // activation line at mid-screen
+    const y = window.scrollY + headerH + window.innerHeight * 0.5;
+
+    let currentId = sections[0]?.id;
+    for (const s of sections) {
+      if (s.offsetTop <= y) currentId = s.id;
+    }
+
+    navLinks.forEach((a) => {
+      a.classList.toggle("active", a.getAttribute("href") === `#${currentId}`);
+    });
+  }
 
     window.addEventListener("scroll", setActiveNav, { passive: true });
     window.addEventListener("resize", setActiveNav);

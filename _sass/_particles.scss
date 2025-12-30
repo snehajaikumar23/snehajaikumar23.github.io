@@ -12,7 +12,7 @@
 
   .jumbotron {
     position: absolute;
-    top: 52%;
+    top: 48%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -89,7 +89,7 @@
 
 .particles-scroll {
   position: absolute;
-  bottom: 2%;
+  bottom: 1%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -110,5 +110,5 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
