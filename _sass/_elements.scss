@@ -300,6 +300,21 @@ a.reversefootnote {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.work-detail h3 {
+  font-size: 1.15rem;  
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.work-detail ul {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.work-detail li {
+  margin-bottom: 0.4rem;
+}
+
 .work-detail.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -307,15 +322,19 @@ a.reversefootnote {
 }
 
 .work-meta {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   opacity: 0.7;
   margin-bottom: 0.5rem;
 }
 
 .work-skills {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   opacity: 0.8;
   margin-bottom: 1rem;
+}
+
+#work {
+  margin-top: 3rem;  
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -382,7 +401,7 @@ a.reversefootnote {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
   gap: 2rem;
-  justify-content: center;
+  justify-content: start;
 }
 
 .project-card {

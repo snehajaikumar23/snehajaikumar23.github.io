@@ -1,20 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //Particles background
+  /* Particles background */
   particlesJS.load("particles-js", "assets/js/particles.json");
 
-  //Work timeline interaction
+  /* Work timeline interaction */
   const timelineItems = document.querySelectorAll(".timeline-item");
   const workDetails = document.querySelectorAll(".work-detail");
 
   if (timelineItems.length && workDetails.length) {
     timelineItems.forEach((item) => {
-      // Initialize aria state
       item.setAttribute(
         "aria-selected",
         item.classList.contains("is-active") ? "true" : "false"
       );
 
-      // Click interaction
       item.addEventListener("click", () => {
         const targetId = item.dataset.role;
 
@@ -27,14 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
         item.setAttribute("aria-selected", "true");
 
         workDetails.forEach((detail) => {
-          detail.classList.toggle(
-            "is-visible",
-            detail.id === targetId
-          );
+          detail.classList.toggle("is-visible", detail.id === targetId);
         });
       });
 
-      // Keyboard accessibility
       item.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
@@ -44,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //Highlight active section in nav
+  /* Nav active section logic */
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".site-nav a");
 
@@ -53,6 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
+
+          const heroHeight =
+            document.getElementById("particles-js")?.offsetHeight || 0;
+
+          // Prevent activation while hero is visible
+          if (window.scrollY < heroHeight - 80) return;
 
           const id = entry.target.getAttribute("id");
 
@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => navObserver.observe(section));
   }
 
+  /* Project filtering */
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
