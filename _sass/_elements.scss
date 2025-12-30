@@ -195,11 +195,15 @@ a.reversefootnote {
   margin-bottom: 6rem;
 }
 
-.section-content {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+#projects.wide-section {
+  padding-left: clamp(2.5rem, 8vw, 7rem);
 }
+
+// .section-content {
+//   max-width: 1200px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 .timeline {
   position: relative;
@@ -283,6 +287,9 @@ a.reversefootnote {
   grid-template-columns: 240px 1fr;
   gap: 4rem;
   margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-details {
