@@ -1,22 +1,11 @@
 header {
   position: fixed;
   top: 1.5rem;
-  left: 1.5rem;
-  // z-index: 1000;
-  
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  left: 2.0rem;
 
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-
   backdrop-filter: blur(6px);
-  // background-color: color-mix(
-  //   in srgb,
-  //   var(--color-background) 85%,
-  //   transparent
-  // );
 }
 
 @supports not (backdrop-filter: blur(6px)) {
@@ -143,7 +132,6 @@ a.reversefootnote {
 #home .site-nav {
   display: flex;
   gap: 2rem;     
-  // margin-left: 2rem;
 }
 
 #home .site-nav a {
@@ -163,27 +151,11 @@ a.reversefootnote {
   display: none;
 }
 
-// #home header {
-//   opacity: 0;
-//   pointer-events: none;
-//   transition: opacity 0.3s ease;
-// }
-
-// #home header.is-visible {
-//   opacity: 1;
-//   pointer-events: auto;
-// }
-
 #home .site-nav a.active {
   color: var(--color-heading);
   opacity: 1;
   border-bottom: 1px solid currentColor;
 }
-
-// #home .toggle-icon {
-//   margin-left: auto;
-//   padding-left: 2rem;
-// }
 
 .wide-section {
   width: 100vw;
