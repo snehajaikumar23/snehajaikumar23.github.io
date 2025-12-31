@@ -2,6 +2,7 @@ header {
   position: fixed;
   top: 1.5rem;
   left: 2.0rem;
+  z-index: 1000;
 
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -161,7 +162,6 @@ a.reversefootnote {
   width: 100vw;
   position: relative;
   left: 50%;
-  right: 50%;
   margin-left: -50vw;
 
   padding-left: var(--section-padding);
@@ -433,9 +433,12 @@ a.reversefootnote {
 
 .project-card a:focus {
   opacity: 1;
+  outline: none;  
+}
+
+.project-card a:focus-visible {
+  outline: 2px solid var(--color-border);
   outline-offset: 2px;
-  outline: none;
-  border-bottom: 1px solid currentColor;
 }
 
 .project-award {
