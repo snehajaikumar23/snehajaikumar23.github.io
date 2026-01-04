@@ -26,11 +26,11 @@ a {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1.5em;
-  margin-bottom: 2em;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // margin-top: 1.5em;
+  // margin-bottom: 2em;
 }
 
 footer {
@@ -74,12 +74,11 @@ table.table {
   color: var(--color-text);
 }
 
-#home header {
-  position: fixed;
-  top: 1.5rem;
-  left: 2rem;
-  z-index: 1000;
+// #home header {
+//   position: fixed;
+//   z-index: 1000;
 
-  background: transparent;
-  margin: 0;
-}
+//   //background: transparent;
+//   margin: 0;
+//   background-color: rgba(255, 0, 0, 0.15);
+// }
