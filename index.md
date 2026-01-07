@@ -164,7 +164,7 @@ title: Home
         </div>
 
         <a
-            href="https://arxiv.org/abs/XXXX.XXXXX"
+            href="https://docs.google.com/document/d/16de9RqK3y0rQ6_g4TJtvDnsirfZYEEIxP0sifBG_BLg/edit?usp=sharing"
             target="_blank"
             rel="noopener"
             class="paper-link"
@@ -219,7 +219,7 @@ title: Home
             target="_blank"
             rel="noopener"
         >
-            View code →
+            View Project →
         </a>
     </article>
 
@@ -247,7 +247,7 @@ title: Home
             target="_blank"
             rel="noopener"
         >
-            View code →
+            View Project →
         </a>
     </article>
 
@@ -263,9 +263,6 @@ title: Home
         <span>AWS Tranium</span>
         <span>TinyLlama</span>
       </div>
-      <a href="https://github.com/yourusername/mindflow" target="_blank" rel="noopener">
-        View on GitHub →
-      </a>
     </article>
 
     <article class="project-card" data-category="ml">
