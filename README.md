@@ -1,2 +1,2 @@
-# snehajaikumar23.github.io
+# sneha-jaikumar.github.io
 Portfolio Website
