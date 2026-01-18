@@ -2,7 +2,7 @@ title: Sneha Jaikumar
 hero_title: Hi, I’m Sneha!
 description: "Researcher and data scientist focused on building intelligent systems that can learn from complex data and respond meaningfully in the real world."
 baseurl: ""
-url: https://snehajaikumar23.github.io
+url: https://sneha-jaikumar.github.io
 
 # site settings
 taglong: I’m a data scientist and researcher currently pursuing my M.S. in Data Science at Columbia University. I enjoy turning messy, complex data into systems that work in the real world, from research pipelines to production-ready software. Based in NYC.
@@ -20,7 +20,7 @@ joblines:
 # profile links
 profile:
   linkedin: https://www.linkedin.com/in/sneha-jaikumar
-  github: https://github.com/snehajaikumar23
+  github: https://github.com/sneha-jaikumar
   cv: false
 
 # build settings
